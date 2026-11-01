@@ -2,6 +2,8 @@ const express = require('express');
 
 const app = express();
 
+const dotenv = require('dotenv');
+
 const errorMiddleware = require('./middlewares/error');
 
 const cookieParser = require('cookie-parser');
@@ -10,7 +12,6 @@ dotenv.config({
     path: path.join(__dirname, "config/config.env")
 });
 
-dotenv.config();
 
 app.use(express.json());
 
